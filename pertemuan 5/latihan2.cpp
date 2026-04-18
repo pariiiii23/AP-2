@@ -1,17 +1,25 @@
 #include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
 
-int main(){
-    vector<string> Mahasiswa = {"Nadia", "Echa", "Carlos", "Ilham", "Alan"};
-    for(int i = 0; i < Mahasiswa.size(); i++){
-    cout << Mahasiswa[i] << endl;
+int main() {
+    
+    vector<string> mahasiswa = {"Nadia", "Echa", "Carlos", "Ilham", "Alan"};
+    cout << "Isi vector awal:" << endl;
+    for (int i = 0; i < mahasiswa.size(); i++) {
+        cout << mahasiswa[i] << endl;
     }
-    Mahasiswa.push_back("Houra");
-    Mahasiswa.pop_back();
-    Mahasiswa.erase(Mahasiswa.begin() + 1);
+    mahasiswa.push_back("Houra");
+    mahasiswa.pop_back();
 
-    for(int i = 0; i < Mahasiswa.size(); i++){
-    cout << Mahasiswa[i] << endl;
+    mahasiswa.erase(mahasiswa.begin() + 1);
+
+    cout << "Isi vector setelah perubahan:" << endl;
+    for (int i = 0; i < mahasiswa.size(); i++) {
+        cout << mahasiswa[i] << endl;
     }
+    cout << "Jumlah data tersisa: " << mahasiswa.size() << endl;
+
+   
 }
